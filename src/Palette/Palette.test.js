@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import apiCalls from './apiCalls';
+import Palette from './Palette';
 
-describe('apiCalls', () => {
+describe('Palette', () => {
   it('should return true', () => {
     expect(true).toEqual(true)
   })
