@@ -1,12 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import { getProjects } from './apiCalls/apiCalls';
 
-function App() {
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      projects: [],
+      message: ''
+    }
+  }
+
+async componentDidMount() {
+  try {
+    const projects = await getProjects();
+    this.setState({projects: projects})
+  } catch ({ message }) {
+    this.setState({ error: message })
+  }  
+}
+
+render() {
+  const { projects } = this.state;
+  let projectList = projects.map((project, index) =>{
+    return <div key={index}>
+      <p>{project.name}</p>
+    </div>
+  })
   return (
     <div>
-      Hey this is our Color Palette!
+    <h1>Color Palette</h1>
+      { projectList }
     </div>
   );
+}
+
+ 
 }
 
 export default App;
