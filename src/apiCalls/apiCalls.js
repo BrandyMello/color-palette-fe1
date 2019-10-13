@@ -2,8 +2,8 @@ const path = process.env.REACT_APP_BACKEND_URL;
 
 export const getProjects = async name => {
   try {
-    const projects = path + "/api/v1/projects";
-    const response = await fetch(projects);
+    const url = path + "/api/v1/projects";
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error("There was an error getting your projects");
     }
@@ -17,8 +17,8 @@ export const getProjects = async name => {
 
 export const getPalettes = async name => {
   try {
-    const palettes = path + "/api/v1/palettes";
-    const response = await fetch(palettes);
+    const url = path + "/api/v1/palettes";
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error("There was an error getting your palettes");
     }
@@ -70,7 +70,7 @@ export const updateProject = async project => {
     const options = {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(palette)
+      body: JSON.stringify(project)
     };
 
     const response = await fetch(url, options);
