@@ -2,7 +2,7 @@ const path = process.env.REACT_APP_BACKEND_URL;
 
 export const getProjects = async name => {
   try {
-    const projects = `${path}/projects`;
+    const projects = path + "/api/v1/projects";
     const response = await fetch(projects);
     if (!response.ok) {
       throw new Error("There was an error getting your projects");
@@ -17,7 +17,7 @@ export const getProjects = async name => {
 
 export const getPalettes = async name => {
   try {
-    const palettes = `${path}/palettes`;
+    const palettes = path + "/api/v1/palettes";
     const response = await fetch(palettes);
     if (!response.ok) {
       throw new Error("There was an error getting your palettes");
@@ -32,7 +32,7 @@ export const getPalettes = async name => {
 
 export const addNewProject = async project => {
   try {
-    const url = `${path}/projects`;
+    const url = path + "/api/v1/projects";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -49,7 +49,7 @@ export const addNewProject = async project => {
 
 export const addNewPalette = async palette => {
   try {
-    const url = `${path}/palettes`;
+    const url = path + "/api/v1/palettes";
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -66,7 +66,7 @@ export const addNewPalette = async palette => {
 
 export const updateProject = async project => {
   try {
-    const url = `${path}/projects/${project.id}`;
+    const url = path + `/api/v1/projects/${project.id}`;
     const options = {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -83,7 +83,7 @@ export const updateProject = async project => {
 
 export const updatePalette = async palette => {
   try {
-    const url = `${path}/palettes/${palette.id}`;
+    const url = path + `/api/v1/palettes/${palette.id}`;
     const options = {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -100,7 +100,7 @@ export const updatePalette = async palette => {
 
 export const deleteProject = async id => {
   try {
-    const url = `${path}/projects/${id}`;
+    const url = path + `/api/v1/projects/${id}`;
     const options = {
       method: "DELETE"
     };
@@ -114,7 +114,7 @@ export const deleteProject = async id => {
 
 export const deletePalette = async id => {
   try {
-    const url = `${path}/projects/${id}`;
+    const url = path + `/api/v1/projects/${id}`;
     const options = {
       method: "DELETE"
     };
