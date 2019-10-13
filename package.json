@@ -8,12 +8,17 @@
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "test": "react-scripts test --verbose"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1"
   }
 }

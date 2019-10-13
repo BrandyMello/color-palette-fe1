@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import apiCalls from './apiCalls';
+import Nav from './Nav';
 
-describe('apiCalls', () => {
+describe('Nav', () => {
   it('should return true', () => {
     expect(true).toEqual(true)
   })
