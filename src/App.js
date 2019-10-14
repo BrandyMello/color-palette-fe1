@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { getProjects, getPalettes } from './apiCalls/apiCalls';
+import { getProjects, getAllPalettes } from './apiCalls/apiCalls';
 import SavedProjectsNav from './SavedProjectsNav/SavedProjectsNav';
 import SaveForm from './SaveForm/SaveForm';
 import Palette from './Palette/Palette'
@@ -18,7 +18,7 @@ class App extends Component {
 async componentDidMount() {
   try {
     const projects = await getProjects();
-    const palettes = await getPalettes();
+    const palettes = await getAllPalettes();
     this.setState({ projects: projects })
     this.setState({ palettes: palettes })
   } catch ({ message }) {
@@ -27,7 +27,6 @@ async componentDidMount() {
 }
 
 render() {
-  console.log('App render', palettes)
   const { projects } = this.state;
   let projectList = projects.map((project, index) =>{
     return <div key={index}>
@@ -39,7 +38,7 @@ render() {
     <h1>Color Palette</h1>
       { projectList }
       <SavedProjectsNav projects={ this.state.projects }/>
-      <Palette palettes={this.state.palettes} />
+      <Palette />
       <SaveForm projects={ this.state.projects } />
     </div>
   );

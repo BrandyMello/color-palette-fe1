@@ -14,7 +14,24 @@ export const getProjects = async name => {
   }
 };
 
-export const getPalettes = async name => {
+export const getProjectPalettes = async project => {
+  try {
+    const { id } = project;
+    const url = path + `/api/v1/projects/${id}/palettes`;
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(
+        "There was a problem getting the palettes for this project"
+      );
+    }
+    const palettes = await response.json();
+    return palettes;
+  } catch ({ message }) {
+    throw new Error(message);
+  }
+};
+
+export const getAllPalettes = async () => {
   try {
     const url = path + "/api/v1/palettes";
     const response = await fetch(url);
@@ -22,7 +39,6 @@ export const getPalettes = async name => {
       throw new Error("There was an error getting your palettes");
     }
     const palettes = await response.json();
-    console.log(palettes);
     return palettes;
   } catch ({ message }) {
     throw new Error(message);
@@ -98,12 +114,11 @@ export const updatePalette = async palette => {
 };
 
 export const deleteProject = async id => {
+  const options = {
+    method: "DELETE"
+  }
   try {
     const url = path + `/api/v1/projects/${id}`;
-    const options = {
-      method: "DELETE"
-    };
-
     const response = await fetch(url, options);
     return response;
   } catch ({ message }) {
@@ -112,12 +127,11 @@ export const deleteProject = async id => {
 };
 
 export const deletePalette = async id => {
+  const options = {
+    method: "DELETE"
+  };
   try {
-    const url = path + `/api/v1/projects/${id}`;
-    const options = {
-      method: "DELETE"
-    };
-
+    const url = path + `/api/v1/palettes/${id}`;
     const response = await fetch(url, options);
     return response;
   } catch ({ message }) {
