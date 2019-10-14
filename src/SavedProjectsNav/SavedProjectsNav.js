@@ -1,9 +1,10 @@
 import React from 'react';
 
-const SavedProjectsNav = () => {
+const SavedProjectsNav = ({ projects }) => {
+let project = projects.map((project, index) => <button key={index}>{project.name}</button>);
   return (
     <div>
-      Hey
+      { project }
     </div>
   )
 }
