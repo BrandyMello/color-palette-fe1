@@ -8,7 +8,6 @@ export const getProjects = async name => {
       throw new Error("There was an error getting your projects");
     }
     const projects = await response.json();
-    console.log(projects);
     return projects;
   } catch ({ message }) {
     throw new Error(message);
