@@ -1,10 +1,15 @@
 import React from 'react';
 
-const SaveForm = () => {
+const SaveForm = ({ projects }) => {
+  console.log(projects)
+  let eachProject = projects.map((project, index) => <option key={index} value={project.name}>{ project.name }</option>)
   return (
-    <div>
-      Hey
-    </div>
+    <form>
+      <select>
+        { eachProject }
+      </select>
+    </form>
+    
   )
 }
 

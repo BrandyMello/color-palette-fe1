@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { getProjects } from './apiCalls/apiCalls';
 import SavedProjectsNav from './SavedProjectsNav/SavedProjectsNav';
+import SaveForm from './SaveForm/SaveForm';
 
 class App extends Component {
   constructor() {
@@ -33,6 +34,7 @@ render() {
     <h1>Color Palette</h1>
       { projectList }
       <SavedProjectsNav projects={ this.state.projects }/>
+      <SaveForm projects={ this.state.projects } />
     </div>
   );
 }
