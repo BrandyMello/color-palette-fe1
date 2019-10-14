@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { getProjects } from './apiCalls/apiCalls';
+import SavedProjectsNav from './SavedProjectsNav/SavedProjectsNav';
 
 class App extends Component {
   constructor() {
@@ -31,6 +32,7 @@ render() {
     <div>
     <h1>Color Palette</h1>
       { projectList }
+      <SavedProjectsNav projects={ this.state.projects }/>
     </div>
   );
 }
