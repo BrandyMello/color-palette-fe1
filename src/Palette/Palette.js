@@ -4,7 +4,7 @@ const Palette = () => {
   
   return (
     <div>
-      Hey
+      Random Palette Here
     </div>
   )
 }
