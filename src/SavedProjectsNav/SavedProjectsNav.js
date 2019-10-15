@@ -1,15 +1,10 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
-
-// const goToProject = () => {
-
-// }
+import { NavLink } from 'react-router-dom';
 
 const SavedProjectsNav = ({ projects }) => {
-let project = projects.map((project, index) => <button key={index}>{project.name}</button>);
-console.log(project.id)
+  let project = projects.map((project, index) => <NavLink to={`/projects/${project.id}`}><button key={index}>{project.name}</button></NavLink>);
   return (
-    <div>
+    <div> 
       { project }
     </div>
   )
