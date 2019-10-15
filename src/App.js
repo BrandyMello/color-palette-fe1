@@ -7,6 +7,7 @@ import Palette from './Palette/Palette';
 import Projects from './Projects/Projects';
 import { Route, NavLink } from 'react-router-dom';
 import Nav from './Nav/Nav';
+import RandomPalette from './RandomPalette/RandomPalette'
 
 class App extends Component {
   constructor() {
@@ -14,6 +15,13 @@ class App extends Component {
     this.state = {
       projects: [],
       palettes: [],
+      colors: [
+        {color_1: this.generateRandomHex()},
+        {color_2: this.generateRandomHex()},
+        {color_3: this.generateRandomHex()},
+        {color_4: this.generateRandomHex()},
+        {color_5: this.generateRandomHex()}
+      ],
       message: ''
     }
   }
@@ -27,6 +35,15 @@ async componentDidMount() {
   } catch ({ message }) {
     this.setState({ error: message })
   }  
+}
+
+generateRandomHex = () => {
+  const characters = '0123456789ABCDEF';
+  let hex = '';
+    for (let i = 0; i < 6; i++) {
+      hex += characters[Math.floor(Math.random() * 16)];
+    }
+    return `#${hex}`;
 }
 
 render() {
@@ -43,7 +60,7 @@ render() {
         <Route exact path='/' render={() => (
           <div>
             <SavedProjectsNav projects={this.state.projects} />
-            <Palette />
+            <RandomPalette colors={this.state.colors}/>
             <SaveForm projects={this.state.projects} />
           </div>)}
         />
@@ -72,3 +89,4 @@ render() {
 export default App;
 
 // component = { NavLink } to = {`/projects/${foundProject.id}`}
+
