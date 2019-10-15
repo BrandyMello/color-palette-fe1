@@ -9,6 +9,7 @@ import { Route, NavLink } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import RandomPalette from './RandomPalette/RandomPalette'
 import SaveProjects from './SaveProjects/SaveProjects'
+import SavePalette from './SavePalette/SavePalette'
 
 class App extends Component {
   constructor() {
@@ -59,7 +60,6 @@ generateRandomPalette = () => {
 }
 
 render() {
-  console.log('app projects', this.state.projects)
   const { projects } = this.state;
   return (
     <div>
@@ -69,8 +69,8 @@ render() {
           <div>
             <SavedProjectsNav projects={this.state.projects} />
             <RandomPalette colors={this.state.colors} generateRandomPalette={this.generateRandomPalette}/>
-            <ProjectsDropDown projects={this.state.projects} />
             <SaveProjects />
+            <SavePalette projects={this.state.projects} colors={this.state.colors}/>
           </div>)}
         />
         <Route

@@ -2,7 +2,6 @@ import React from 'react'
 import './RandomPalette.css'
 
 const RandomPalette = ({ colors, generateRandomPalette }) => {
-  console.log(generateRandomPalette)
   const hexColor = colors.map((color, index) => {
     return (
       <div 
