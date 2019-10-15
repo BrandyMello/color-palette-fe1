@@ -46,6 +46,17 @@ generateRandomHex = () => {
     return `#${hex}`;
 }
 
+generateRandomPalette = () => {
+  this.setState({ colors: [
+    {color_1: this.generateRandomHex()},
+    {color_2: this.generateRandomHex()},
+    {color_3: this.generateRandomHex()},
+    {color_4: this.generateRandomHex()},
+    {color_5: this.generateRandomHex()}
+  ]
+  })
+}
+
 render() {
   const { projects } = this.state;
   // let projectList = projects.map((project, index) =>{
@@ -60,7 +71,7 @@ render() {
         <Route exact path='/' render={() => (
           <div>
             <SavedProjectsNav projects={this.state.projects} />
-            <RandomPalette colors={this.state.colors}/>
+            <RandomPalette colors={this.state.colors} generateRandomPalette={this.generateRandomPalette}/>
             <SaveForm projects={this.state.projects} />
           </div>)}
         />
