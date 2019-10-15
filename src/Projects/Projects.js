@@ -2,7 +2,6 @@ import React from 'react';
 import './Projects.css';
 
 const Projects = (props) => {
-  // console.log(props.id)
   let projectPalettes = props.palettes.filter(palette => {
     if(palette.projectName === props.name) {
       return palette
