@@ -23,7 +23,9 @@
   color: #09d3ac;
 }
 
-/* body {
-  font-family: 'Ubuntu',
-    sans-serif;
-} */
+body {
+  background-color: #262629;
+  color: white;
+  /* font-family: 'Ubuntu',
+    sans-serif; */
+}
