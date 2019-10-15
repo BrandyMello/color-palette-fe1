@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SaveForm from './SaveForm';
+import SaveForm from './ProjectsDropDown';
 
 describe('SaveForm', () => {
   it('should return true', () => {

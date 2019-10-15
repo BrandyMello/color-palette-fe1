@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import { getProjects, getAllPalettes } from './apiCalls/apiCalls';
 import SavedProjectsNav from './SavedProjectsNav/SavedProjectsNav';
-import SaveForm from './SaveForm/SaveForm';
+import ProjectsDropDown from './ProjectsDropDown/ProjectsDropDown';
 import Palette from './Palette/Palette';
 import Projects from './Projects/Projects';
 import { Route, NavLink } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import RandomPalette from './RandomPalette/RandomPalette'
+import SaveProjects from './SaveProjects/SaveProjects'
+import SavePalette from './SavePalette/SavePalette'
 
 class App extends Component {
   constructor() {
@@ -59,11 +61,6 @@ generateRandomPalette = () => {
 
 render() {
   const { projects } = this.state;
-  // let projectList = projects.map((project, index) =>{
-  //   return <div key={index}>
-  //     <p>{project.name}</p>
-  //   </div>
-  // })
   return (
     <div>
       <Nav />
@@ -72,7 +69,8 @@ render() {
           <div>
             <SavedProjectsNav projects={this.state.projects} />
             <RandomPalette colors={this.state.colors} generateRandomPalette={this.generateRandomPalette}/>
-            <SaveForm projects={this.state.projects} />
+            <SaveProjects />
+            <SavePalette projects={this.state.projects} colors={this.state.colors}/>
           </div>)}
         />
         <Route
