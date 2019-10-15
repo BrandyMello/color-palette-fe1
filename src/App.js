@@ -3,7 +3,10 @@ import './App.css';
 import { getProjects, getAllPalettes } from './apiCalls/apiCalls';
 import SavedProjectsNav from './SavedProjectsNav/SavedProjectsNav';
 import SaveForm from './SaveForm/SaveForm';
-import Palette from './Palette/Palette'
+import Palette from './Palette/Palette';
+import Projects from './Projects/Projects';
+import { Route, NavLink } from 'react-router-dom';
+import Nav from './Nav/Nav';
 
 class App extends Component {
   constructor() {
@@ -28,18 +31,37 @@ async componentDidMount() {
 
 render() {
   const { projects } = this.state;
-  let projectList = projects.map((project, index) =>{
-    return <div key={index}>
-      <p>{project.name}</p>
-    </div>
-  })
+  // let projectList = projects.map((project, index) =>{
+  //   return <div key={index}>
+  //     <p>{project.name}</p>
+  //   </div>
+  // })
   return (
     <div>
-    <h1>Color Palette</h1>
-      { projectList }
-      <SavedProjectsNav projects={ this.state.projects }/>
-      <Palette />
-      <SaveForm projects={ this.state.projects } />
+      <Nav />
+      <main>
+        <Route exact path='/' render={() => (
+          <div>
+            <SavedProjectsNav projects={this.state.projects} />
+            <Palette />
+            <SaveForm projects={this.state.projects} />
+          </div>)}
+        />
+        <Route
+          path='/projects/:id'
+          render={({ match }) => {
+            const { id } = match.params;
+            const foundProject = projects.find(
+              project => project.id === parseInt(id)
+            )
+            return (
+              <div>
+                <Projects {...foundProject} palettes={this.state.palettes}/>
+              </div>
+            )
+          }}
+        />
+      </main>  
     </div>
   );
 }
@@ -48,3 +70,5 @@ render() {
 }
 
 export default App;
+
+// component = { NavLink } to = {`/projects/${foundProject.id}`}
