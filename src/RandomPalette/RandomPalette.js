@@ -1,10 +1,9 @@
 import React from 'react'
 import './RandomPalette.css'
 
-const RandomPalette = ({ colors }) => {
-  console.log(colors)
+const RandomPalette = ({ colors, generateRandomPalette }) => {
+  console.log(generateRandomPalette)
   const hexColor = colors.map((color, index) => {
-    console.log('hexcolor', color)
     return (
       <div 
       className ="swatch"
@@ -16,6 +15,7 @@ const RandomPalette = ({ colors }) => {
   return (
     <div>
       { hexColor }
+      <button type="submit" onClick={() => generateRandomPalette()}>Generate Palette</button>
     </div>
   )
 }
