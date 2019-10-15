@@ -27,7 +27,7 @@ const Projects = (props) => {
   console.log("props in projects", props)
   return (
     <div>
-      <h1>{props.name}</h1>
+      <h2>{props.name}</h2>
       <table>
         {paletteRow}
       </table>

@@ -1,0 +1,35 @@
+/* font-family: 'Ubuntu',
+sans-serif;
+font-family: 'Modak',
+cursive; */
+
+.navBar {
+  text-align: center;
+}
+
+.logo {
+  height: 200px;
+  width: auto;
+  position: absolute;
+  top: 113px;
+  right: 210px;
+}
+
+h1 {
+  font-size: 4em;
+  /* font-family: 'Modak',
+    cursive; */
+}
+
+input {
+  height: 30px;
+  width: 120px;
+  /* border-color: #6E9488; */
+  border-radius: 3% 0 0 3%;
+}
+
+button {
+  height: 34px;
+  /* border-color: #6E9488;
+  background-color: #6E9488; */
+}
