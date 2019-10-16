@@ -7,8 +7,10 @@ const handlePaletteNameChange = (e, oldPalette) => {
   updatePalette(newPalette)
 }
 
-// const handleProjectNameChange = (e, oldProjectName)
-
+const handleProjectNameChange = (e, props) => {
+  const newProject = {id: props.id, name: e.target.innerText}
+  updateProject(newProject)
+}
 const Projects = (props) => {
   console.log('projects props', props)
   let projectPalettes = props.palettes.filter(palette => {
@@ -34,7 +36,7 @@ const Projects = (props) => {
 })
   return (
     <div>
-      <h2 contentEditable={true}>{props.name} </h2>
+      <h2 contentEditable={true} onKeyUpCapture={(e) => handleProjectNameChange(e, props)}>{props.name}</h2>
       <table>
         {paletteRow}
       </table>
