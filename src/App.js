@@ -84,6 +84,7 @@ render() {
   const { projects } = this.state;
   return (
     <div>
+      <NavLink to='/'><button className="homeButton">HOME</button></NavLink>
       <Nav />
       <main>
         <Route exact path='/' render={() => (

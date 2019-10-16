@@ -21,8 +21,9 @@ class SaveProjects extends Component {
   
   render() {
     return (
-    <form>
+    <form className="save_project_form">
       <input 
+      className="project_input"
       type="text"
       id="name"
       name="projectName"
@@ -31,6 +32,7 @@ class SaveProjects extends Component {
       onChange={this.handleChange}
       />
       <button 
+      className="add_project_button"
       name="newProject"
       type="submit"
       onClick={ this.saveNewProject}
