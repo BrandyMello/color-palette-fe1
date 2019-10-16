@@ -3,7 +3,6 @@ import './App.css';
 import { getProjects, getAllPalettes, updateProject, deleteProject, deletePalette } from './apiCalls/apiCalls';
 import SavedProjectsNav from './SavedProjectsNav/SavedProjectsNav';
 import ProjectsDropDown from './ProjectsDropDown/ProjectsDropDown';
-import Palette from './Palette/Palette';
 import Projects from './Projects/Projects';
 import { Route, NavLink } from 'react-router-dom';
 import Nav from './Nav/Nav';
@@ -85,6 +84,7 @@ render() {
   const { projects } = this.state;
   return (
     <div>
+      <NavLink to='/'><button className="homeButton">HOME</button></NavLink>
       <Nav />
       <main>
         <Route exact path='/' render={() => (

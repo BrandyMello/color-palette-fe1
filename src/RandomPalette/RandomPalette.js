@@ -12,9 +12,9 @@ const RandomPalette = ({ colors, generateRandomPalette }) => {
     )
   })
   return (
-    <div>
+    <div className="button_div">
       { hexColor }
-      <button type="submit" onClick={() => generateRandomPalette()}>Generate Palette</button>
+      <button type="submit" onClick={() => generateRandomPalette()} className="generate_palette_button">Generate Palette</button>
     </div>
   )
 }

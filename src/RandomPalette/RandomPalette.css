@@ -1,6 +1,12 @@
 .swatch {
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 300px;
+  width: 19.8%;
+}
+
+.generate_palette_button {
+  width: 600px;
+  margin: 5px;
+  margin-left: 31%;
 }
