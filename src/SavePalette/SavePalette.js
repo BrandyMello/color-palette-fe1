@@ -30,27 +30,6 @@ class SavePalette extends Component {
     console.log('lol', matchingProjectId.id)
     return matchingProjectId.id
   }
-
-  saveNewPaletteToProject = async(e) => {
-    e.preventDefault()
-    // try {
-    await addNewPalette(
-      {
-        name: this.state.paletteName,
-        projectName: this.state.project,
-        colorOne: this.props.colors[0].color_1,
-        colorTwo: this.props.colors[1].color_2,
-        colorThree: this.props.colors[2].color_3,
-        colorFour: this.props.colors[3].color_4,
-        colorFive: this.props.colors[4].color_5,
-        projectId: this.getProjectId()
-      })
-    //   const palettes = await getAllPalettes()
-    //   this.setState = ({ palettes: palettes})
-    // }catch (error) {
-    //   this.setState({ error });
-    // }
-  }
   
   render() {
     return (
@@ -69,7 +48,16 @@ class SavePalette extends Component {
       className="add_palette_button"
       name="newPalette"
       type="submit"
-      onClick={ this.saveNewPaletteToProject}
+      onClick={() => this.props.saveNewPaletteToProject({
+              name: this.state.paletteName,
+              projectName: this.state.project,
+              colorOne: this.props.colors[0].color_1,
+              colorTwo: this.props.colors[1].color_2,
+              colorThree: this.props.colors[2].color_3,
+              colorFour: this.props.colors[3].color_4,
+              colorFive: this.props.colors[4].color_5,
+              projectId: this.getProjectId()
+            })}
       >
       Save Palette
       </button>
