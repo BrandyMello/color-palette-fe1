@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { getProjects, getAllPalettes } from './apiCalls/apiCalls';
+import { getProjects, getAllPalettes, updateProject } from './apiCalls/apiCalls';
 import SavedProjectsNav from './SavedProjectsNav/SavedProjectsNav';
 import ProjectsDropDown from './ProjectsDropDown/ProjectsDropDown';
 import Palette from './Palette/Palette';
@@ -16,6 +16,7 @@ class App extends Component {
     super();
     this.state = {
       projects: [],
+      projectName: '',
       palettes: [],
       colors: [
         {color_1: this.generateRandomHex()},
@@ -82,7 +83,7 @@ render() {
             )
             return (
               <div>
-                <Projects {...foundProject} palettes={this.state.palettes}/>
+                <Projects {...foundProject} palettes={this.state.palettes} updateProjectName={this.updateProjectName}/>
               </div>
             )
           }}
