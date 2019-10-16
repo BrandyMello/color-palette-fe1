@@ -21,7 +21,6 @@ const Projects = (props) => {
    return (
      <>
      <tr>
-       <th>{projPalette.name}</th>
     {/* <button type="submit" onclick={props.deleteSpecificProject(props.id)}>Delete Project</button> */}
          <th contentEditable={true} onKeyUpCapture={(e) => handlePaletteNameChange(e, projPalette)}>{projPalette.name}</th>
      </tr>
