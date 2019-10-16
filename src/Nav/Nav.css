@@ -1,17 +1,17 @@
-.navBar {
-  text-align: center;
-}
+.navBar {}
 
 .logo {
   height: 200px;
   width: auto;
   position: absolute;
+  text-align: center;
   top: 17.5%;
   right: 19%;
 }
 
 h1 {
   font-size: 4em;
+  text-align: center;
 }
 
 input {
@@ -22,4 +22,8 @@ input {
 
 button {
   height: 34px;
+}
+
+.homeButton {
+  margin: 50px;
 }

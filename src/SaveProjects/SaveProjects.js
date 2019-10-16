@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './SaveProjects.css'
-import {addNewProject} from '../apiCalls/apiCalls'
+import {addNewProject } from '../apiCalls/apiCalls';
 
 class SaveProjects extends Component {
   constructor() {
@@ -16,7 +16,7 @@ class SaveProjects extends Component {
 
   saveNewProject = async(e) => {
     e.preventDefault()
-    addNewProject({name: this.state.projectName})
+    addNewProject({name: this.state.projectName});
   }
   
   render() {
