@@ -1,0 +1,18 @@
+.add_palette_form {
+  display: flex;
+  height: 75px;
+  width: 600px;
+  margin-left: 31%;
+}
+
+.palette_input {
+  display: inline-block;
+  width: 450px;
+  height: 48px;
+}
+
+.add_palette_button {
+  display: inline-block;
+  width: 144px;
+  height: 54px;
+}

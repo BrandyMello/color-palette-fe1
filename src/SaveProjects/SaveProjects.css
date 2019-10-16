@@ -1,0 +1,18 @@
+.save_project_form {
+  display: flex;
+  height: 75px;
+  width: 600px;
+  margin-left: 31%;
+}
+
+.project_input {
+  display: inline-block;
+  width: 450px;
+  height: 48px;
+}
+
+.add_project_button {
+  display: inline-block;
+  width: 144px;
+  height: 54px;
+}

@@ -1,6 +1,6 @@
 const path = process.env.REACT_APP_BACKEND_URL;
 
-export const getProjects = async name => {
+export const getProjects = async () => {
   try {
     const url = path + "/api/v1/projects";
     const response = await fetch(url);

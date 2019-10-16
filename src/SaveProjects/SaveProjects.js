@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './SaveProjects.css'
-import {addNewProject} from '../apiCalls/apiCalls'
+import {addNewProject } from '../apiCalls/apiCalls';
 
 class SaveProjects extends Component {
   constructor() {
@@ -13,18 +13,13 @@ class SaveProjects extends Component {
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-
-  // saveNewProject = async(e) => {
-  //   e.preventDefault()
-  //   addNewProject({name: this.state.projectName})
-
-  // }
   
   render() {
     console.log('working', this.props)
     return (
-    <form>
+    <form className="save_project_form">
       <input 
+      className="project_input"
       type="text"
       id="name"
       name="projectName"
@@ -33,6 +28,7 @@ class SaveProjects extends Component {
       onChange={this.handleChange}
       />
       <button 
+      className="add_project_button"
       name="newProject"
       type="submit"
       onClick={() => this.props.saveNewProject({name: this.state.projectName})}

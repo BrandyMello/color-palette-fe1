@@ -54,9 +54,10 @@ class SavePalette extends Component {
   
   render() {
     return (
-    <form>
+    <form className="add_palette_form">
       <ProjectsDropDown projects={this.props.projects} handleDropDown={this.handleDropDown}/>
       <input 
+      className="palette_input"
       type="text"
       id="name"
       name="paletteName"
@@ -65,6 +66,7 @@ class SavePalette extends Component {
       onChange={this.handleChange}
       />
       <button 
+      className="add_palette_button"
       name="newPalette"
       type="submit"
       onClick={ this.saveNewPaletteToProject}
