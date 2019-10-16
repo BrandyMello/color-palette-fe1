@@ -13,13 +13,9 @@ class SaveProjects extends Component {
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-
-  saveNewProject = async(e) => {
-    e.preventDefault()
-    addNewProject({name: this.state.projectName});
-  }
   
   render() {
+    console.log('working', this.props)
     return (
     <form className="save_project_form">
       <input 
@@ -35,7 +31,7 @@ class SaveProjects extends Component {
       className="add_project_button"
       name="newProject"
       type="submit"
-      onClick={ this.saveNewProject}
+      onClick={() => this.props.saveNewProject({name: this.state.projectName})}
       >
       Create New Project
       </button>
