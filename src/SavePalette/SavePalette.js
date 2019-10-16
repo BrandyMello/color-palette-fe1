@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './SavePalette.css'
-import {addNewPalette} from '../apiCalls/apiCalls'
+import {addNewPalette, getProjectPalettes} from '../apiCalls/apiCalls'
 import ProjectsDropDown from '../ProjectsDropDown/ProjectsDropDown'
 
 class SavePalette extends Component {
@@ -26,22 +26,24 @@ class SavePalette extends Component {
         return project.id
       }
     })
-    console.log(matchingProjectId.id)
+    console.log('lol', matchingProjectId.id)
     return matchingProjectId.id
   }
 
   saveNewPaletteToProject = async(e) => {
     e.preventDefault()
     console.log('colors', this.props.colors)
+    console.log('id', this.getProjectId())
+    console.log('pName', this.state.project)
     addNewPalette(
       {
-        name: 'this.state.paletteName',
-        projectName: 'this.state.project',
-        colorOne: 'this.props.colors[0].color_1',
-        colorTwo: 'this.props.colors[1].color_2',
-        colorThree: 'this.props.colors[2].color_3',
-        colorFour: 'this.props.colors[3].color_4',
-        colorFive: 'this.props.colors[4].color_5',
+        name: this.state.paletteName,
+        projectName: this.state.project,
+        colorOne: this.props.colors[0].color_1,
+        colorTwo: this.props.colors[1].color_2,
+        colorThree: this.props.colors[2].color_3,
+        colorFour: this.props.colors[3].color_4,
+        colorFive: this.props.colors[4].color_5,
         projectId: this.getProjectId()
       })
   }

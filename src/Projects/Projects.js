@@ -1,5 +1,6 @@
 import React from 'react';
 import './Projects.css';
+import { updateProject } from '../apiCalls/apiCalls'
 
 const Projects = (props) => {
   let projectPalettes = props.palettes.filter(palette => {
@@ -23,11 +24,9 @@ const Projects = (props) => {
     </>
    )
 })
-  console.log("list", projectPalettes)
-  console.log("props in projects", props)
   return (
     <div>
-      <h2>{props.name}</h2>
+      <h2 contentEditable={true}>{props.name}</h2>
       <table>
         {paletteRow}
       </table>

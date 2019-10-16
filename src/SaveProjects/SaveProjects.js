@@ -16,7 +16,6 @@ class SaveProjects extends Component {
 
   saveNewProject = async(e) => {
     e.preventDefault()
-    console.log('this.state.projectName', this.state.projectName)
     addNewProject({name: this.state.projectName})
   }
   
