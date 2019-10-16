@@ -13,12 +13,6 @@ class SaveProjects extends Component {
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-
-  // saveNewProject = async(e) => {
-  //   e.preventDefault()
-  //   addNewProject({name: this.state.projectName})
-
-  // }
   
   render() {
     console.log('working', this.props)

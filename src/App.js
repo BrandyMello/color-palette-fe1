@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { getProjects, getAllPalettes, updateProject, deleteProject, deletePalette, addNewProject } from './apiCalls/apiCalls';
+import { getProjects, getAllPalettes, deleteProject, deletePalette, addNewProject, addNewPalette } from './apiCalls/apiCalls';
 import SavedProjectsNav from './SavedProjectsNav/SavedProjectsNav';
 import ProjectsDropDown from './ProjectsDropDown/ProjectsDropDown';
 import Palette from './Palette/Palette';
@@ -70,6 +70,16 @@ saveNewProject = async (name) => {
   }
 }
 
+saveNewPaletteToProject = async (paletteInfo) => {
+  try {
+    await addNewPalette(paletteInfo)
+    const palette = await getAllPalettes()
+    this.setState({ palettes: {...palette} })
+  }catch (error) {
+    this.setState({ error });
+  }
+}
+
 deleteSpecificProject = async (id) => {
   try {
     await deleteProject(id);
@@ -102,7 +112,7 @@ render() {
             <SavedProjectsNav projects={this.state.projects} />
             <RandomPalette colors={this.state.colors} generateRandomPalette={this.generateRandomPalette}/>
             <SaveProjects projects={this.state.projects} saveNewProject={this.saveNewProject}/>
-            <SavePalette projects={this.state.projects} colors={this.state.colors}/>
+            <SavePalette projects={this.state.projects} colors={this.state.colors} saveNewPaletteToProject={this.saveNewPaletteToProject}/>
           </div>)}
         />
         <Route
