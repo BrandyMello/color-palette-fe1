@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavePalette should match snapshot 1`] = `
+<form
+  className="add_palette_form"
+>
+  <ProjectsDropDown
+    handleDropDown={[Function]}
+    projects={
+      Array [
+        Object {
+          "id": 1,
+          "name": "SeaBreeze",
+        },
+      ]
+    }
+  />
+  <input
+    className="palette_input"
+    id="name"
+    name="paletteName"
+    onChange={[Function]}
+    placeholder="New Palette Name"
+    type="text"
+    value=""
+  />
+  <button
+    className="add_palette_button"
+    name="newPalette"
+    onClick={[Function]}
+    type="submit"
+  >
+    Save Palette
+  </button>
+</form>
+`;

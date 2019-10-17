@@ -68,3 +68,4 @@ describe("SavePalette", () => {
     expect(wrapper.state("paletteName")).toEqual(expected);
   });
 });
+

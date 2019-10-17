@@ -52,3 +52,4 @@ describe("SaveProjects", () => {
     expect(wrapper.instance().handleChange).toHaveBeenCalledWith(mockEvent);
   });
 });
+

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './SavePalette.css'
-import {addNewPalette, getAllPalettes} from '../apiCalls/apiCalls'
 import ProjectsDropDown from '../ProjectsDropDown/ProjectsDropDown'
 
 class SavePalette extends Component {
