@@ -18,6 +18,7 @@ table {
   font-size: 30px;
 }
 
+.delete-project,  
 .delete-palette {
   background-color: #808080;
   color: white;

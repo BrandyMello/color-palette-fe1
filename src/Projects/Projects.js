@@ -54,7 +54,7 @@ const Projects = props => {
       >
         {props.name}
       </h2>
-      {/* <button type="submit" onclick={() => props.deleteSpecificProject(props.id)}>Delete Project</button> */}
+      <button type="submit" className="delete-project" onClick={() => props.deleteSpecificProject(props.id)}>Delete Project</button>
       <table>{paletteRow}</table>
     </div>
   );

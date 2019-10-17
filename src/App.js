@@ -170,8 +170,8 @@ class App extends Component {
                     {...foundProject}
                     palettes={this.state.palettes}
                     updateProjectName={this.updateProjectName}
-                    deleteSpecificProject={this.deleteSpecificProject}
                     deleteSpecificPalette={this.deleteSpecificPalette}
+                    deleteSpecificProject={this.deleteSpecificProject}
                     handlePaletteNameChange={this.handlePaletteNameChange}
                     handleProjectNameChange={this.handleProjectNameChange}
                   />
