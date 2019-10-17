@@ -1,46 +1,48 @@
-import React, { Component } from 'react'
-import './SaveProjects.css'
+import React, { Component } from "react";
+import "./SaveProjects.css";
 
 class SaveProjects extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      projectName: ''
-    }
+      projectName: ""
+    };
   }
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   clearInput = () => {
-    this.setState({ projectName: ''});
-  }
-  
+    this.setState({ projectName: "" });
+  };
+
   render() {
     return (
-    <form className="save_project_form">
-      <input 
-      className="project_input"
-      type="text"
-      id="name"
-      name="projectName"
-      placeholder="New Project Name"
-      value={this.state.projectName} 
-      onChange={this.handleChange}
-      onClick={() => this.clearInput()}
-      />
-      <button 
-      className="add_project_button"
-      name="newProject"
-      type="submit"
-      onClick={(e) => this.props.saveNewProject({name: this.state.projectName}, e)}
-      >
-      Create New Project
-      </button>
-    </form>
-    )
+      <form className="save_project_form">
+        <input
+          className="project_input"
+          type="text"
+          id="name"
+          name="projectName"
+          placeholder="New Project Name"
+          value={this.state.projectName}
+          onChange={this.handleChange}
+          onClick={() => this.clearInput()}
+        />
+        <button
+          className="add_project_button"
+          name="newProject"
+          type="submit"
+          onClick={e =>
+            this.props.saveNewProject({ name: this.state.projectName }, e)
+          }
+        >
+          Create New Project
+        </button>
+      </form>
+    );
   }
 }
 
-export default SaveProjects
+export default SaveProjects;
