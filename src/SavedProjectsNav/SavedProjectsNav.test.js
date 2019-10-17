@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SavedProjectsNav from './SavedProjectsNav';
+import Projects from '../Projects/Projects';
+import { NavLink } from 'react-router-dom';
 
 describe('SavedProjectsNav', () => {
   it('should match snapshot', () => {

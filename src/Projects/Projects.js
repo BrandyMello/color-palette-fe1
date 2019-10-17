@@ -8,7 +8,7 @@ const handlePaletteNameChange = (e, oldPalette) => {
 }
 
 const handleProjectNameChange = (e, props) => {
-  const newProject = {id: props.id, name: e.target.innerText}
+  const newProject = {id: props.id, name: newProjectName}
   updateProject(newProject)
 }
 const Projects = (props) => {
