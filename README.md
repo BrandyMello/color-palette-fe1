@@ -25,7 +25,11 @@ Brandy Mello: https://github.com/BrandyMello
 
 
 
+### Project Board
+https://github.com/BrandyMello/color-palette-fe1/projects/1
 
+### Tech
+HTML5/CSS/React/Jest&Enzyme
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
