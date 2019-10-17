@@ -8,6 +8,9 @@ https://color-palette-fe.herokuapp.com/
 Emily Lalonde: https://github.com/EmilyLalonde <br>
 Brandy Mello: https://github.com/BrandyMello
 
+# Color Palette Images
+![localhost_3000_ (1)](https://user-images.githubusercontent.com/46384968/66984415-e4170880-f077-11e9-88d3-01420ef341c7.png)<img width="1440" alt="Screen Shot 2019-10-17 at 12 35 39 AM" src="https://user-images.githubusercontent.com/46384968/66984079-428fb700-f077-11e9-8621-6cc72ebd9a38.png">
+
 ### WireFrames
 <img width="1440" alt="Screen Shot 2019-10-13 at 9 34 09 PM" src="https://user-images.githubusercontent.com/46384968/66728326-5f22b980-ee01-11e9-8e6c-a06e691dbcab.png">
 <img width="1440" alt="Screen Shot 2019-10-13 at 9 34 38 PM" src="https://user-images.githubusercontent.com/46384968/66728330-64800400-ee01-11e9-9ee3-ba9c82ad0d61.png">
