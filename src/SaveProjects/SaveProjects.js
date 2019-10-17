@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './SaveProjects.css'
-import {addNewProject } from '../apiCalls/apiCalls';
 
 class SaveProjects extends Component {
   constructor() {
@@ -13,9 +12,12 @@ class SaveProjects extends Component {
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
+
+  clearInput = () => {
+    this.setState({ projectName: ''});
+  }
   
   render() {
-    console.log('working', this.props)
     return (
     <form className="save_project_form">
       <input 
@@ -26,12 +28,13 @@ class SaveProjects extends Component {
       placeholder="New Project Name"
       value={this.state.projectName} 
       onChange={this.handleChange}
+      onClick={() => this.clearInput()}
       />
       <button 
       className="add_project_button"
       name="newProject"
       type="submit"
-      onClick={() => this.props.saveNewProject({name: this.state.projectName})}
+      onClick={(e) => this.props.saveNewProject({name: this.state.projectName}, e)}
       >
       Create New Project
       </button>

@@ -59,7 +59,8 @@ generateRandomPalette = () => {
   })
 }
 
-saveNewProject = async (name) => {
+saveNewProject = async (name, e) => {
+  e.preventDefault()
   try {
     await addNewProject(name)
     const projects = await getProjects();
