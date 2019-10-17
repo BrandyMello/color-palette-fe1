@@ -21,3 +21,4 @@ describe('Routes', () => {
 
     expect(wrapper.find(Projects)).toHaveLength(1)
   });
+});
