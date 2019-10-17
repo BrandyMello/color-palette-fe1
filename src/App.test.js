@@ -89,6 +89,12 @@ describe('App', () => {
   });
 });
 
+it('should generate a random hex code when generateRandomHex is called', () => {
+  const wrapper = shallow(<App />)
+  wrapper.instance().generateRandomHex = jest.fn()
+  expect(wrapper.instance().generateRandomHex).not.toHaveBeenCalled()
+})
+
 describe('Routes', () => {
   it('should route to People', () => {
     const wrapper = mount(
