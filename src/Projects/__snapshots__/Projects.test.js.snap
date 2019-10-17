@@ -5,6 +5,7 @@ exports[`Projects should match the snapshot 1`] = `
   <h2
     contentEditable={true}
     onKeyUpCapture={[Function]}
+    suppressContentEditableWarning={true}
   >
     Neutral Colors
   </h2>
