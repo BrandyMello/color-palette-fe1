@@ -1,8 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import RandomPalette from './RandomPalette';
+import React from "react";
+import { shallow } from "enzyme";
+import RandomPalette from "./RandomPalette";
 
-describe('RandomPalette', () => {
+describe("RandomPalette", () => {
   let wrapper;
   let mockPalette;
 
@@ -19,10 +19,12 @@ describe('RandomPalette', () => {
         projectId: 1
       }
     ];
-    wrapper = shallow(<RandomPalette colors={mockPalette} generateRandomPalette={jest.fn()} />);
+    wrapper = shallow(
+      <RandomPalette colors={mockPalette} generateRandomPalette={jest.fn()} />
+    );
   });
 
-  it('should match snapshot', () => {
+  it("should match snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
