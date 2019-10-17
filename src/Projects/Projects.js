@@ -8,6 +8,7 @@ const Projects = (props) => {
     }
   });
   let paletteRow = projectPalettes.map((projPalette, index) => {
+    console.log("props in projects", props)
    return (
      <>
      <tr>
