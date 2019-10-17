@@ -9,7 +9,7 @@ exports[`RandomPalette should match snapshot 1`] = `
   </h3>
   <div
     className="swatch"
-    key="1571291932872"
+    key="0"
     style={
       Object {
         "backgroundColor": undefined,
