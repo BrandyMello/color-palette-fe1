@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectsDropDown should match snapshot 1`] = `
+<div
+  class="custom-select"
+>
+  <h4>
+    Select A Project To Save A Palette
+  </h4>
+  <select
+    className="new_palette_name"
+    onChange={[Function]}
+  >
+    <option
+      key="0"
+      value="Warm Colors"
+    >
+      Warm Colors
+    </option>
+    <option
+      key="1"
+      value="Cool Colors"
+    >
+      Cool Colors
+    </option>
+  </select>
+</div>
+`;

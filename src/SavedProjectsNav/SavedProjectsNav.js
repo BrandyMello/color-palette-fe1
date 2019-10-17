@@ -4,7 +4,7 @@ import "./SavedProjectsNav.css";
 
 const SavedProjectsNav = ({ projects }) => {
   let project = projects.map((project, index) => (
-    <NavLink to={`/projects/${project.id}`} key={index + Date.now()}>
+    <NavLink to={`/projects/${project.id}`} key={index}>
       <button className="project_buttons">{project.name}</button>
     </NavLink>
   ));
