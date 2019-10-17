@@ -8,7 +8,7 @@ exports[`SavedProjectsNav should match snapshot 1`] = `
     Your Saved Projects
   </h2>
   <NavLink
-    key="1571291933554"
+    key="0"
     to="/projects/1"
   >
     <button
@@ -18,7 +18,7 @@ exports[`SavedProjectsNav should match snapshot 1`] = `
     </button>
   </NavLink>
   <NavLink
-    key="1571291933556"
+    key="1"
     to="/projects/2"
   >
     <button
