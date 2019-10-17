@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RandomPalette should match snapshot 1`] = `
+<div
+  className="button_div"
+>
+  <div
+    className="swatch"
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  />
+  <button
+    className="generate_palette_button"
+    onClick={[Function]}
+    type="submit"
+  >
+    Generate Palette
+  </button>
+</div>
+`;
