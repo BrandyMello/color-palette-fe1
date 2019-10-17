@@ -8,7 +8,8 @@ class SavePalette extends Component {
     this.state = {
       project: "",
       paletteName: "",
-      palettes: []
+      palettes: [],
+      id: 0
     };
   }
 
@@ -26,7 +27,6 @@ class SavePalette extends Component {
         return project.id;
       }
     });
-    console.log(matchingProjectId)
     return matchingProjectId.id;
   };
 

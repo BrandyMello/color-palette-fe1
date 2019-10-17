@@ -3,6 +3,7 @@ import { shallow, mount } from 'enzyme';
 import Projects from './Projects/Projects';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
+import { updatePalette } from './apiCalls/apiCalls'
 
 describe('App', () => {
   it('should match the snapshot', () => {
@@ -94,6 +95,17 @@ it('should generate a random hex code when generateRandomHex is called', () => {
   wrapper.instance().generateRandomHex = jest.fn()
   expect(wrapper.instance().generateRandomHex).not.toHaveBeenCalled()
 })
+
+describe('generateRandomPalette', () => {
+  it('should send new random hex colors to state', () => {
+    const wrapper = shallow(<App />)
+    const { colors } = wrapper.state().colors;
+
+    wrapper.instance().generateRandomPalette();
+    const newColors = wrapper.state().colors
+    expect(newColors).not.toEqual(colors);
+  });
+});
 
 describe('Routes', () => {
   it('should route to People', () => {

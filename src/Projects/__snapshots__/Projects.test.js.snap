@@ -10,6 +10,13 @@ exports[`Projects should match the snapshot 1`] = `
   >
     Neutral Colors
   </h2>
+  <button
+    className="delete-project"
+    onClick={[Function]}
+    type="submit"
+  >
+    Delete Project
+  </button>
   <table />
 </div>
 `;

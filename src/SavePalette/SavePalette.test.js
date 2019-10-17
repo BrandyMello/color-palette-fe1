@@ -8,6 +8,7 @@ describe("SavePalette", () => {
   let mockProjects;
 
   beforeEach(() => {
+
     mockProjects = [{ name: "SeaBreeze", id: 1 }];
 
     mockPalette = [
@@ -67,4 +68,16 @@ describe("SavePalette", () => {
 
     expect(wrapper.state("paletteName")).toEqual(expected);
   });
+
+  it("should update state when handleDropDown is called", () => {
+    const expected = {
+      name: "SeaBreeze",
+      id: 24
+    };
+
+    wrapper.instance().handleDropDown(expected);
+
+    expect(wrapper.state("project")).toEqual(expected);
+  });
+
 });
