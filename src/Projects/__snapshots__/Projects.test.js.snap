@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects should match the snapshot 1`] = `
+<div>
+  <h2
+    contentEditable={true}
+    onKeyUpCapture={[Function]}
+  >
+    Neutral Colors
+  </h2>
+  <table />
+</div>
+`;
