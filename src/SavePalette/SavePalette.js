@@ -26,6 +26,7 @@ class SavePalette extends Component {
         return project.id;
       }
     });
+    console.log(matchingProjectId)
     return matchingProjectId.id;
   };
 
