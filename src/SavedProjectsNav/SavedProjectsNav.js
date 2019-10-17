@@ -8,7 +8,13 @@ const SavedProjectsNav = ({ projects }) => {
       <button className="project_buttons">{project.name}</button>
     </NavLink>
   ));
-  return <div>{project}</div>;
+  return (
+    <div className="saved-section">
+      <h2>Your Saved Projects</h2>
+    {project}
+    </div>
+    )
+    
 };
 
 export default SavedProjectsNav;

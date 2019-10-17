@@ -12,7 +12,8 @@ const RandomPalette = ({ colors, generateRandomPalette }) => {
     );
   });
   return (
-    <div className="button_div">
+    <div className="palette-section">
+      <h3>Randomly Generated Palette</h3>
       {hexColor}
       <button
         type="submit"

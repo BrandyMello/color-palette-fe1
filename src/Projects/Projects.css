@@ -1,14 +1,29 @@
 td {
-  color: red;
+  border: 1px solid black;
+  border-radius: 8px;
   width: 300px;
   height:300px;
-  border: none;
 }
 
 table {
   margin: 2%;
 }
 
-h2 {
-  margin-left: 3%;
+.project-name-h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.palette-name {
+  font-size: 30px;
+}
+
+.delete-palette {
+  background-color: #808080;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 40px;
+  width: 100px;
 }

@@ -7,12 +7,17 @@
 
 .palette_input {
   display: inline-block;
+  font-size: 18px;
   width: 450px;
   height: 48px;
 }
 
 .add_palette_button {
+  background-color: #808080;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
   display: inline-block;
-  width: 144px;
+  width: 174px;
   height: 54px;
 }

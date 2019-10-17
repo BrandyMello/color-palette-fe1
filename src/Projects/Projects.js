@@ -12,6 +12,7 @@ const Projects = props => {
       <>
         <tr>
           <th
+            className="palette-name"
             contentEditable={true}
             suppressContentEditableWarning={true}
             onKeyUpCapture={e => props.handlePaletteNameChange(e, projPalette)}
@@ -21,21 +22,17 @@ const Projects = props => {
         </tr>
         <tr key={projPalette.id}>
           <td key={index} style={{ backgroundColor: projPalette.colorOne }}>
-            lock
           </td>
           <td key={index} style={{ backgroundColor: projPalette.colorTwo }}>
-            lock
           </td>
           <td key={index} style={{ backgroundColor: projPalette.colorThree }}>
-            lock
           </td>
           <td key={index} style={{ backgroundColor: projPalette.colorFour }}>
-            lock
           </td>
           <td key={index} style={{ backgroundColor: projPalette.colorFive }}>
-            lock
           </td>
           <button
+            className="delete-palette"
             type="submit"
             onClick={() =>
               props.deleteSpecificPalette(props.palettes[index].id)
@@ -50,6 +47,7 @@ const Projects = props => {
   return (
     <div>
       <h2
+        className="project-name-h2"
         contentEditable={true}
         suppressContentEditableWarning={true}
         onKeyUpCapture={e => props.handleProjectNameChange(e, props)}

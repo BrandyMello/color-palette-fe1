@@ -1,12 +1,36 @@
+h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
 .swatch {
   border: 1px solid black;
+  border-radius: 8px;
   display: inline-block;
   height: 300px;
   width: 19.8%;
 }
 
 .generate_palette_button {
+  background-color: #808080;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  height: 50px;
   width: 600px;
   margin: 5px;
   margin-left: 31%;
+}
+
+.generate_palette_button:hover {
+  background-color: #46a3e4;
+}
+
+.palette-section {
+  border: 2px solid #808080;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding-bottom: 30px;
 }
