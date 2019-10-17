@@ -1,16 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Projects.css';
-import { updateProject, updatePalette } from '../apiCalls/apiCalls';
 
-const handlePaletteNameChange = (e, oldPalette) => {
-  const newPalette = {...oldPalette, name: e.target.innerText} 
-  updatePalette(newPalette)
-}
-
-const handleProjectNameChange = (e, props) => {
-  const newProject = {id: props.id, name: e.target.innerText}
-  updateProject(newProject)
-}
 const Projects = (props) => {
   let projectPalettes = props.palettes.filter(palette => {
     if(palette.projectName === props.name) {
@@ -22,8 +12,7 @@ const Projects = (props) => {
    return (
      <>
      <tr>
-    {/* <button type="submit" onclick={props.deleteSpecificProject(props.id)}>Delete Project</button> */}
-         <th contentEditable={true} onKeyUpCapture={(e) => handlePaletteNameChange(e, projPalette)}>{projPalette.name}</th>
+         <th contentEditable={true} suppressContentEditableWarning={true} onKeyUpCapture={(e) => props.handlePaletteNameChange(e, projPalette)}>{projPalette.name}</th>
      </tr>
    <tr key={projPalette.id}>
      <td key={index} style={{ backgroundColor: projPalette.colorOne }}>lock</td>
@@ -36,9 +25,11 @@ const Projects = (props) => {
     </>
    )
   })
+  console.log('p-rops', props)
   return (
     <div>
-      <h2 contentEditable={true} onKeyUpCapture={(e) => handleProjectNameChange(e, props)}>{props.name}</h2>
+      <h2 contentEditable={true} suppressContentEditableWarning={true} onKeyUpCapture={(e) => props.handleProjectNameChange(e, props)}>{props.name}</h2>
+      {/* <button type="submit" onclick={() => props.deleteSpecificProject(props.id)}>Delete Project</button> */}
       <table>
         {paletteRow}
       </table>
