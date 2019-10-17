@@ -95,7 +95,10 @@ class App extends Component {
   }
   
   handleProjectNameChange = (e, props) => {
-    const newProject = {id: props.id, name: e.target.innerText}
+    const newProjectName = e.target.innerText;
+    const keepPalettes = this.state.palettes.filter(palette => palette.projectId === props.id);
+    keepPalettes.forEach(keptPalette => updatePalette({...keptPalette, projectName: newProjectName}))
+    const newProject = {id: props.id, name: newProjectName}
     updateProject(newProject)
   }
 
