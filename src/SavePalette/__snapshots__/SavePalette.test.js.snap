@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SavePalette should match snapshot 1`] = `
-<form
-  className="add_palette_form"
->
+<div>
   <ProjectsDropDown
     handleDropDown={[Function]}
     projects={
@@ -15,22 +13,26 @@ exports[`SavePalette should match snapshot 1`] = `
       ]
     }
   />
-  <input
-    className="palette_input"
-    id="name"
-    name="paletteName"
-    onChange={[Function]}
-    placeholder="New Palette Name"
-    type="text"
-    value=""
-  />
-  <button
-    className="add_palette_button"
-    name="newPalette"
-    onClick={[Function]}
-    type="submit"
+  <form
+    className="add_palette_form"
   >
-    Save Palette
-  </button>
-</form>
+    <input
+      className="palette_input"
+      id="name"
+      name="paletteName"
+      onChange={[Function]}
+      placeholder="New Palette Name"
+      type="text"
+      value=""
+    />
+    <button
+      className="add_palette_button"
+      name="newPalette"
+      onClick={[Function]}
+      type="submit"
+    >
+      Save Palette
+    </button>
+  </form>
+</div>
 `;

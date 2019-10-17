@@ -7,7 +7,7 @@ import {
   deletePalette,
   addNewProject,
   addNewPalette,
-  updateProject, 
+  updateProject,
   updatePalette
 } from "./apiCalls/apiCalls";
 import SavedProjectsNav from "./SavedProjectsNav/SavedProjectsNav";
@@ -90,17 +90,21 @@ class App extends Component {
   };
 
   handlePaletteNameChange = (e, oldPalette) => {
-    const newPalette = {...oldPalette, name: e.target.innerText} 
-    updatePalette(newPalette)
-  }
-  
+    const newPalette = { ...oldPalette, name: e.target.innerText };
+    updatePalette(newPalette);
+  };
+
   handleProjectNameChange = (e, props) => {
     const newProjectName = e.target.innerText;
-    const keepPalettes = this.state.palettes.filter(palette => palette.projectId === props.id);
-    keepPalettes.forEach(keptPalette => updatePalette({...keptPalette, projectName: newProjectName}))
-    const newProject = {id: props.id, name: newProjectName}
-    updateProject(newProject)
-  }
+    const keepPalettes = this.state.palettes.filter(
+      palette => palette.projectId === props.id
+    );
+    keepPalettes.forEach(keptPalette =>
+      updatePalette({ ...keptPalette, projectName: newProjectName })
+    );
+    const newProject = { id: props.id, name: newProjectName };
+    updateProject(newProject);
+  };
 
   deleteSpecificProject = async id => {
     try {
@@ -123,7 +127,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("projects", this.state.projects);
     const { projects } = this.state;
     return (
       <div>

@@ -1,3 +1,24 @@
+h2 {
+  font-size: 34px;
+}
+
 .project_buttons {
+  background-color:	#808080;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
   margin: 5px 5px 20px;
+  height: 46px;
+  width: 170px;
+}
+
+.project_buttons:hover {
+  background-color: #46a3e4;
+}
+
+.saved-section {
+  border: 2px solid #808080;
+  border-radius: 8px;
 }

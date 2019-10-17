@@ -3,6 +3,7 @@
 exports[`Projects should match the snapshot 1`] = `
 <div>
   <h2
+    className="project-name-h2"
     contentEditable={true}
     onKeyUpCapture={[Function]}
     suppressContentEditableWarning={true}

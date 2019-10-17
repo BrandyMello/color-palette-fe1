@@ -3,7 +3,6 @@ import { shallow, mount } from 'enzyme';
 import Projects from './Projects/Projects';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
-import { toBindingIdentifierName } from '@babel/types';
 
 describe('App', () => {
   it('should match the snapshot', () => {
@@ -72,7 +71,21 @@ describe('App', () => {
     const wrapper = shallow(<App />)
     wrapper.setState({palettes: originalPalettes});
     wrapper.instance().deleteSpecificPalette(1);
+    wrapper.setState({ palettes: [] })
     expect(wrapper.state('palettes')).toEqual([])
+  });
+
+  it('should delete a specific project when deleteSpecificProject is called', () => {
+    const mockProject = [{
+      id: 1,
+      name: 'Warm Colors'
+    }];
+
+    const wrapper = shallow(<App />)
+    wrapper.setState({ projects: mockProject });
+    wrapper.instance().deleteSpecificProject(1);
+    wrapper.setState({projects: []})
+    expect(wrapper.state('projects')).toEqual([])
   });
 });
 

@@ -116,7 +116,7 @@ export const updatePalette = async palette => {
 export const deleteProject = async id => {
   const options = {
     method: "DELETE"
-  }
+  };
   try {
     const url = path + `/api/v1/projects/${id}`;
     const response = await fetch(url, options);
@@ -138,4 +138,3 @@ export const deletePalette = async id => {
     throw new Error(message);
   }
 };
-

@@ -1,25 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SavedProjectsNav should match snapshot 1`] = `
-<div>
+<div
+  className="saved-section"
+>
+  <h2>
+    Your Saved Projects
+  </h2>
   <NavLink
-    key="0"
+    key="1571291933554"
     to="/projects/1"
   >
     <button
       className="project_buttons"
-      key="0"
     >
       Warm Colors
     </button>
   </NavLink>
   <NavLink
-    key="1"
+    key="1571291933556"
     to="/projects/2"
   >
     <button
       className="project_buttons"
-      key="1"
     >
       Cool Colors
     </button>

@@ -2,10 +2,14 @@
 
 exports[`RandomPalette should match snapshot 1`] = `
 <div
-  className="button_div"
+  className="palette-section"
 >
+  <h3>
+    Randomly Generated Palette
+  </h3>
   <div
     className="swatch"
+    key="1571291932872"
     style={
       Object {
         "backgroundColor": undefined,
