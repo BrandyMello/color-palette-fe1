@@ -8,7 +8,10 @@ const handlePaletteNameChange = (e, oldPalette) => {
 }
 
 const handleProjectNameChange = (e, props) => {
-  const newProject = {id: props.id, name: e.target.innerText}
+  const newProjectName = e.target.innerText;
+  const keepPalettes = props.palettes.filter(palette => palette.projectId === props.id);
+  keepPalettes.forEach(keptPalette => updatePalette({...keptPalette, projectName: newProjectName}))
+  const newProject = {id: props.id, name: newProjectName}
   updateProject(newProject)
 }
 const Projects = (props) => {
@@ -18,6 +21,7 @@ const Projects = (props) => {
     }
   });
   let paletteRow = projectPalettes.map((projPalette, index) => {
+    console.log("props in projects", props)
    return (
      <>
      <tr>
