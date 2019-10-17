@@ -21,7 +21,6 @@ const Projects = (props) => {
    return (
      <>
      <tr>
-    {/* <button type="submit" onclick={props.deleteSpecificProject(props.id)}>Delete Project</button> */}
          <th contentEditable={true} onKeyUpCapture={(e) => handlePaletteNameChange(e, projPalette)}>{projPalette.name}</th>
      </tr>
    <tr key={projPalette.id}>
@@ -35,9 +34,11 @@ const Projects = (props) => {
     </>
    )
   })
+  console.log('p-rops', props)
   return (
     <div>
       <h2 contentEditable={true} onKeyUpCapture={(e) => handleProjectNameChange(e, props)}>{props.name}</h2>
+      <button type="submit" onclick={() => props.deleteSpecificProject(props.id)}>Delete Project</button>
       <table>
         {paletteRow}
       </table>
